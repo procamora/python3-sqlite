@@ -61,7 +61,7 @@ def execute_script_sqlite(database: Path, script: Text) -> None:
     connection.close()
 
 
-def dump_database(database: Path) -> Optional[str]:
+def dump_database(database: Path) -> Optional[Text]:
     """
     Hace un dump de la base de datos y lo retorna
     :param database: ruta de la base de datos
@@ -69,6 +69,6 @@ def dump_database(database: Path) -> Optional[str]:
     """
     if database.exists():
         connection: sqlite3.Connection = sqlite3.connect(str(database))
-        a: str = '\n'.join(connection.iterdump())
+        a: Text = '\n'.join(connection.iterdump())
         return str(a)
     return None
