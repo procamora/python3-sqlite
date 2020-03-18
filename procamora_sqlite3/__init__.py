@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import logging
-
 import colorlog  # https://medium.com/@galea/python-logging-example-with-color-formatting-file-handlers-6ee21d363184
+
+from sqlite.interface_sqlite import conection_sqlite, execute_script_sqlite, dump_database
 
 def get_logger(verbose: bool, name: str = 'Series') -> logging:
     # Desabilita log de modulos
@@ -29,4 +30,5 @@ def get_logger(verbose: bool, name: str = 'Series') -> logging:
         log.setLevel(logging.INFO)
 
     return log
- 
+
+
