@@ -6,7 +6,7 @@ from setuptools import setup
 this_directory = Path(__file__).parent.resolve()
 long_description = Path(this_directory, 'README.md').read_text()
 
-version = '0.6'
+version = '0.7'
 
 setup(
     name='procamora-sqlite3',  # How you named your package folder (MyLib)
