@@ -9,7 +9,7 @@ from pathlib import Path  # nueva forma de trabajar con rutas
 from threading import Lock
 from typing import Dict, Any, List, Union, Tuple, Optional, Text
 
-from .logger import get_logger, logging
+from procamora_sqlite3 import get_logger, logging
 
 logger: logging = get_logger(False, 'sqlite')
 
@@ -37,7 +37,7 @@ def conection_sqlite(database: Path, query: Text, mutex: Lock = None, is_dict: b
             return data
         else:
             logger.critical(f'Database {database} not exits')
-            sys.exit(-1)
+            raise OSError(f'Database {database} not exits')
     except sqlite3.OperationalError:
         logger.critical(f'LOCK {query}, sorry...')
     finally:
