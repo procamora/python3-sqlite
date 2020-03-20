@@ -6,7 +6,7 @@ from setuptools import setup
 this_directory = Path(__file__).parent.resolve()
 long_description = Path(this_directory, 'README.md').read_text()
 
-version = '0.7'
+version = '0.8'
 
 setup(
     name='procamora-sqlite3',  # How you named your package folder (MyLib)
@@ -23,9 +23,8 @@ setup(
     keywords=['sqlite', 'sql', 'sqlite3'],  # Keywords that define your package best
     install_requires=[  # I get to this in a second
         'colorlog',
-        'Werkzeug',
     ],
-    classifiers=[
+    classifiers=[  # https://pypi.org/classifiers/
         'Development Status :: 3 - Alpha',
         # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
         'Intended Audience :: Developers',  # Define that your audience are developers

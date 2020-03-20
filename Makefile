@@ -1,15 +1,13 @@
 #!/usr/bin/env make
 
-OUTPUTEGG=procamora_sqlite3.egg-info/
+OUTPUTEGG=procamora_ping.egg-info/
 OUTPUTDIST=dist/
 
 
 # python3 -m pip install --user --upgrade setuptools wheel twine
 
 dist:
-	#mv README.md README
 	python3 setup.py sdist
-	#mv README README.md
 
 
 #https://twine.readthedocs.io/en/latest/
