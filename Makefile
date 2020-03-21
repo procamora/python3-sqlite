@@ -1,7 +1,7 @@
 #!/usr/bin/env make
 # -*- coding: utf-8 -*-
 
-OUTPUT_EGG=procamora_ping.egg-info/
+OUTPUT_EGG=procamora_sqlite3.egg-info/
 OUTPUT_DIST=dist/
 OUTPUT_MANIFEST=MANIFEST
 
