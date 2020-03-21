@@ -3,15 +3,15 @@
 
 __all__ = ['conection_sqlite', 'execute_script_sqlite', 'dump_database']
 
+import logging
 import sqlite3
-import sys
 from pathlib import Path  # nueva forma de trabajar con rutas
 from threading import Lock
 from typing import Dict, Any, List, Union, Tuple, Optional, Text
 
-from procamora_sqlite3.logger import get_logger, logging
+from procamora_logging.logger import get_logging
 
-logger: logging = get_logger(False, 'sqlite')
+logger: logging = get_logging(False, 'sqlite')
 
 
 def conection_sqlite(database: Path, query: Text, mutex: Lock = None, is_dict: bool = False) \
