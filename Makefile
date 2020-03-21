@@ -1,8 +1,8 @@
 #!/usr/bin/env make
 # -*- coding: utf-8 -*-
 
-OUTPUTEGG=procamora_ping.egg-info/
-OUTPUTDIST=dist/
+OUTPUT_EGG=procamora_ping.egg-info/
+OUTPUT_DIST=dist/
 OUTPUT_MANIFEST=MANIFEST
 
 
